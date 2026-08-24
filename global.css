@@ -3,3 +3,67 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+@theme {
+  --color-background: #f6fdf8;
+  --color-foreground: #17251c;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #e8f5eb;
+
+  --color-text: #17251c;
+  --color-text-muted: #64746a;
+
+  --color-brand: #16a34a;
+  --color-brand-foreground: #ffffff;
+
+  --color-brand-dark: #15803d;
+  --color-brand-dark-foreground: #ffffff;
+
+  --color-border: #cfe6d5;
+
+  --color-success: #22c55e;
+  --color-success-foreground: #ffffff;
+
+  --color-danger: #dc2626;
+  --color-danger-foreground: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #ffffff;
+
+  --color-info: #0ea5e9;
+  --color-info-foreground: #ffffff;
+
+  --color-premium: #65a30d;
+  --color-premium-foreground: #ffffff;
+
+  --color-shadow: rgba(22, 101, 52, 0.1);
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-18: 72px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-30: 120px;
+
+  --font-manrope: manrope-regular;
+  --font-manrope-light: manrope-light;
+  --font-manrope-medium: manrope-medium;
+  --font-manrope-semibold: manrope-semibold;
+  --font-manrope-bold: manrope-bold;
+  --font-manrope-extrabold: manrope-extrabold;
+  --font-manrope-extralight: manrope-extralight;
+}

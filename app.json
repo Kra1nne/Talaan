@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "talaan",
-    "slug": "talaan",
+    "name": "Talaan",
+    "slug": "Talaan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "talaan",
+    "scheme": "Talaan",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -37,6 +37,20 @@
           "dark": {
             "backgroundColor": "#000000"
           }
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Manrope-Bold.ttf",
+            "./assets/fonts/Manrope-ExtraBold.ttf",
+            "./assets/fonts/Manrope-ExtraLight.ttf",
+            "./assets/fonts/Manrope-Light.ttf",
+            "./assets/fonts/Manrope-Meduim.ttf",
+            "./assets/fonts/Manrope-Regular.ttf",
+            "./assets/fonts/Manrope-SemiBold.ttf"
+          ]
         }
       ]
     ],
