@@ -1,12 +1,20 @@
 import "@/global.css";
-import { Text, View } from "react-native";
+import { router } from "expo-router";
+import { styled } from "nativewind";
+import { Pressable, Text, View } from "react-native";
 
-export default function Index() {
+const Screen = styled(Pressable);
+export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
+    <Screen
+      className="flex-1 items-center justify-center bg-brand"
+      onPress={() => router.push("/(tabs)")}
+    >
+      <View className="">
+        <Text className="text-6xl font-manrope-extralight text-white">
+          Talaan
+        </Text>
+      </View>
+    </Screen>
   );
 }
