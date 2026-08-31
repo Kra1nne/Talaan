@@ -8,7 +8,7 @@ export default function App() {
   return (
     <Screen
       className="flex-1 items-center justify-center bg-brand"
-      onPress={() => router.push("/(tabs)")}
+      onPress={() => router.push("/(auth)")}
     >
       <View className="">
         <Text className="text-6xl font-manrope-extralight text-white">

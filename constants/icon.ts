@@ -12,6 +12,7 @@ import calendar from "../assets/icons/calendar-days.svg";
 import camera from "../assets/icons/camera.svg";
 import close from "../assets/icons/circle-xmark.svg";
 import document from "../assets/icons/document.svg";
+import message from "../assets/icons/envelope.svg";
 import filter from "../assets/icons/filter-list.svg";
 import home from "../assets/icons/home.svg";
 import info from "../assets/icons/info.svg";
@@ -31,6 +32,7 @@ import logout from "../assets/icons/user-logout.svg";
 import user from "../assets/icons/user.svg";
 
 export const icons = {
+  message,
   back,
   camera,
   close,

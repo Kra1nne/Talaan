@@ -43,7 +43,6 @@ export default function RootLayout() {
           paddingBottom: bottomInset,
           paddingTop: 0,
           paddingHorizontal: tabBar.horizontalInset,
-          borderRadius: tabBar.radius,
           backgroundColor: colors.background,
           borderTopWidth: 0,
           borderBottomWidth: 0,
