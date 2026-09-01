@@ -94,6 +94,8 @@ export default function SignUp({
         <ScrollView
           contentContainerClassName="flex-grow px-6 py-10 gap-8"
           keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
         >
           <View className="gap-2">
             <Text className="font-manrope-extrabold text-3xl text-text">
@@ -170,20 +172,22 @@ export default function SignUp({
                   clearError("terms");
                 }}
               >
-                <Text className="font-manrope text-sm text-text">
-                  I agree to the{" "}
-                </Text>
-                <Pressable onPress={onTermsPress} hitSlop={4}>
-                  <Text className="font-manrope-semibold text-sm text-brand-dark">
-                    Terms
+                <View className="flex-row flex-wrap items-center gap-1">
+                  <Text className="font-manrope text-xs text-text">
+                    I agree to the{" "}
                   </Text>
-                </Pressable>
-                <Text className="font-manrope text-sm text-text"> and </Text>
-                <Pressable onPress={onPrivacyPress} hitSlop={4}>
-                  <Text className="font-manrope-semibold text-sm text-brand-dark">
-                    Privacy Policy
-                  </Text>
-                </Pressable>
+                  <Pressable onPress={onTermsPress} hitSlop={4}>
+                    <Text className="font-manrope-semibold text-xs text-brand-dark">
+                      Terms
+                    </Text>
+                  </Pressable>
+                  <Text className="font-manrope text-xs text-text"> and </Text>
+                  <Pressable onPress={onPrivacyPress} hitSlop={4}>
+                    <Text className="font-manrope-semibold text-sm text-brand-dark">
+                      Privacy Policy
+                    </Text>
+                  </Pressable>
+                </View>
               </Checkbox>
               {errors.terms ? (
                 <Text className="font-manrope text-xs text-danger ml-7">
@@ -213,7 +217,10 @@ export default function SignUp({
             <Text className="font-manrope text-sm text-text-muted">
               Already have an account?
             </Text>
-            <Pressable onPress={onSignInPress} hitSlop={8}>
+            <Pressable
+              onPress={onSignInPress ?? (() => router.push("/(auth)"))}
+              hitSlop={8}
+            >
               <Text className="font-manrope-semibold text-sm text-brand-dark">
                 Sign in
               </Text>

@@ -76,6 +76,8 @@ export default function SignIn({
         <ScrollView
           contentContainerClassName="flex-grow px-6 py-10 justify-center gap-8"
           keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
         >
           <View className="gap-2">
             <Text className="font-manrope-extrabold text-3xl text-text">
@@ -124,8 +126,13 @@ export default function SignIn({
                 onChange={setRemember}
                 label="Remember me"
               />
-              <Pressable onPress={onForgotPassword} hitSlop={8}>
-                <Text className="font-manrope-medium text-sm text-brand-dark">
+              <Pressable
+                onPress={
+                  onForgotPassword ?? (() => router.push("/forgotpassword"))
+                }
+                hitSlop={8}
+              >
+                <Text className="font-manrope-medium text-xs text-brand-dark">
                   Forgot password?
                 </Text>
               </Pressable>
@@ -148,7 +155,10 @@ export default function SignIn({
             <Text className="font-manrope text-sm text-text-muted">
               Don't have an account?
             </Text>
-            <Pressable onPress={onSignUpPress} hitSlop={8}>
+            <Pressable
+              onPress={onSignUpPress ?? (() => router.push("/sign-up"))}
+              hitSlop={8}
+            >
               <Text className="font-manrope-semibold text-sm text-brand-dark">
                 Sign up
               </Text>

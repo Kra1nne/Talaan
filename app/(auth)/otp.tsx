@@ -50,7 +50,7 @@ export default function Otp({ onBack, onVerify, onResend }: OtpScreenProps) {
       setLoading(true);
       await onVerify?.(code);
       router.push({
-        pathname: "/(auth)/new-password",
+        pathname: "./new-password",
         params: { destination },
       });
     } finally {

@@ -2,13 +2,14 @@ import { BackButton } from "@/components/BackButton";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import Screen from "@/components/ScreenArea";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    Text,
-    View,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  View,
 } from "react-native";
 
 interface ForgotPasswordScreenProps {
@@ -53,7 +54,7 @@ export default function ForgotPasswordScreen({
           contentContainerClassName="flex-grow px-6 py-6 gap-8"
           keyboardShouldPersistTaps="handled"
         >
-          <BackButton onPress={onBack} />
+          <BackButton onPress={onBack ?? (() => router.push("/(auth)"))} />
 
           <View className="gap-8">
             {/* Header */}
